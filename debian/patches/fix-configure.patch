@@ -1,0 +1,35 @@
+Remove invalid check for existence of plugins directory.
+Index: vmd-1.9.1/configure
+===================================================================
+--- vmd-1.9.1.orig/configure	2012-02-02 08:53:54.000000000 +0100
++++ vmd-1.9.1/configure	2014-08-06 13:32:34.629932117 +0200
+@@ -132,29 +132,6 @@
+ # Configure script code begins here
+ ############################################################################
+ 
+-## Test for existence of a properly compiled plugin tree
+-if (!(-e "plugins")) {
+-  print "\n";
+-  print "VMD plugin directory not found.\n";
+-  print "Please compile the VMD plugins and do 'make distrib' to copy them\n";
+-  print "into a 'plugins' directory linked or located in this directory.\n";
+-  print "Be sure your PLUGINDIR environment variable is set before running\n";
+-  print "'make distrib' in the plugin build area.\n";
+-  print "\n";
+-  die "Halting configuration until VMD plugins are built.\n";
+-} else {
+-  if (!(-e "plugins/include/vmdplugin.h")) {
+-    print "\n";
+-    print "VMD plugin include files or directory not found.\n";
+-    print "Please compile the VMD plugins and do 'make distrib' to copy them\n";
+-    print "into a 'plugins' directory linked or located in this directory.\n";
+-    print "Be sure your PLUGINDIR environment variable is set before running\n";
+-    print "'make distrib' in the plugin build area.\n";
+-    print "\n";
+-    die "Halting configuration until VMD plugins are built.\n";
+-  }
+-} 
+-
+ #################### Parse command line options   ###########
+ # list of allowed architectures
+ @archlist=('IRIX6', 'IRIX6_64', 'FREEBSD', 'FREEBSDAMD64', 'HPUX11', 'AIX4', 'AIX5', 'AIX5_64', 'AIX6_64', 'BLUEWATERS', 'LINUX', 'LINUXALPHA', 'LINUXAMD64', 'LINUXIA64', 'LINUXPPC', 'LINUXPPC64', 'MACOSX', 'MACOSXX86', 'MACOSXX86_64', 'TRU64', 'SOLARIS2', 'SOLARIS2_64', 'SOLARISX86', 'SOLARISX86_64', 'WIN32', 'WIN64');

@@ -1,0 +1,16 @@
+Source: vmd
+Section: science
+Priority: extra
+Maintainer: Vlastimil Zíma <zima@karlov.mff.cuni.cz>
+Build-Depends: debhelper (>= 8.0.0), make, texlive-latex-base, latex2html, libfltk1.3-dev, libglu1-mesa-dev, libnetcdf-dev, libxi-dev, python-dev, python-numpy, tcl-dev, tk-dev
+Standards-Version: 3.9.3
+Homepage: http://www.ks.uiuc.edu/Research/vmd/
+Vcs-Browser: https://github.com/ziima/vmd-debian
+Vcs-Git: git@github.com:ziima/vmd-debian.git
+
+Package: vmd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: VMD - Visual molecular dynamics
+ VMD is a molecular visualization program for displaying, animating, and
+ analyzing large biomolecular systems using 3-D graphics and built-in scripting.

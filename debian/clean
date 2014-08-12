@@ -1,0 +1,5 @@
+configure.options
+doc/vmd_version.tex
+doc/vmd_version.txt
+src/Makefile
+src/config.h

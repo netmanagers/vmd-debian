@@ -1,0 +1,5 @@
+vmd (1.9.1-1) unstable; urgency=low
+
+  * Initial package with VMD 1.9.1
+
+ -- Vlastimil Zíma <zima@karlov.mff.cuni.cz>  Wed, 06 Aug 2014 12:54:56 +0200

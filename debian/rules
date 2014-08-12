@@ -1,0 +1,53 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+# Variables
+BINDIR = /usr/bin
+LIBDIR = /usr/lib/vmd
+export PLUGINDIR=${PWD}/plugins
+export VMDINSTALLBINDIR=$${DESTDIR}${BINDIR}
+export VMDINSTALLLIBRARYDIR=$${DESTDIR}${LIBDIR}
+export TCL_INCLUDE_DIR=/usr/include/tcl
+export TCL_LIBRARY_DIR=.
+export TK_INCLUDE_DIR=/usr/include/tk
+export TK_LIBRARY_DIR=.
+export PYTHON_INCLUDE_DIR=/usr/include/python2.7
+export PYTHON_LIBRARY_DIR=.
+export NUMPY_INCLUDE_DIR=/usr/include/python2.7/numpy
+export NUMPY_LIBRARY_DIR=.
+
+
+%:
+	dh $@ --sourcedirectory=src
+
+override_dh_auto_clean:
+	# Clean plugins
+	-make -C plugins_src clean
+	-rm -r ${PLUGINDIR}
+	# Clean vmd
+	-make -C src veryclean
+
+override_dh_auto_configure:
+	./configure LINUXAMD64 OPENGL FLTK TK IMD XINPUT NETCDF CONTRIB TCL PYTHON PTHREADS NUMPY NOSTATICPLUGINS
+
+override_dh_auto_build:
+	# Compile plugins first
+	make -C plugins_src LINUXAMD64 TCLINC=-I${TCL_INCLUDE_DIR} TCLLIB=-I/usr/share/tcltk/tcl8.5
+	# Distribute plugins in where vmd expects them
+	make -C plugins_src distrib
+	# Delete CVS directories from plugins
+	find ${PLUGINDIR} -type d -name 'CVS' | xargs rm -r
+	# Compile vmd
+	dh_auto_build
+
+override_dh_auto_install:
+	dh_auto_install
+	# Delete CVS directories from installation
+	find debian/vmd -type d -name 'CVS' | xargs rm -r
+	# Delete documentation files from lib
+	rm debian/vmd${LIBDIR}/Announcement
+	rm -r debian/vmd${LIBDIR}/doc
+	rm debian/vmd${LIBDIR}/LICENSE
+	rm debian/vmd${LIBDIR}/README
