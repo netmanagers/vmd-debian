@@ -53,3 +53,7 @@ override_dh_auto_install:
 	rm debian/vmd${LIBDIR}/README
 	# Fix paths in vmd startup script
 	sed -i "s|$${PWD}/debian/vmd||g" debian/vmd${BINDIR}/vmd
+	# Remove copies of tcl library files
+	rm -r debian/vmd${LIBDIR}/scripts/tcl8
+	rm -r debian/vmd${LIBDIR}/scripts/tcl8.5
+	rm -r debian/vmd${LIBDIR}/scripts/tk8.5

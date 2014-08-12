@@ -1,3 +1,9 @@
+vmd (1.9.1-3) unstable; urgency=low
+
+  * Remove copies of tcl library files.
+
+ -- Vlastimil Zíma <zima@karlov.mff.cuni.cz>  Tue, 12 Aug 2014 14:29:11 +0200
+
 vmd (1.9.1-2) unstable; urgency=low
 
   * Use bash startup script.
