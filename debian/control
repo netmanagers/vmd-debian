@@ -11,6 +11,7 @@ Vcs-Git: git@github.com:ziima/vmd-debian.git
 Package: vmd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: python2.7, python-tk, rlwrap
 Description: VMD - Visual molecular dynamics
  VMD is a molecular visualization program for displaying, animating, and
  analyzing large biomolecular systems using 3-D graphics and built-in scripting.
