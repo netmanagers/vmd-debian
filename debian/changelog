@@ -1,3 +1,9 @@
+vmd (1.9.1-5) unstable; urgency=low
+
+  * Suggest stride.
+
+ -- Vlastimil Zíma <zima@karlov.mff.cuni.cz>  Tue, 03 Feb 2015 09:10:02 +0100
+
 vmd (1.9.1-4) unstable; urgency=low
 
   * Update Recommends.
