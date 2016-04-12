@@ -1,7 +1,7 @@
 Use python2.7
 --- a/configure
 +++ b/configure
-@@ -1078,7 +1078,7 @@
+@@ -1214,7 +1214,7 @@
  $python_defines     = "-DVMDPYTHON";
  $python_include     = "-I$stock_python_include_dir -I$stock_numpy_include_dir -I$stock_numpy_library_dir";
  $python_library     = "-L$stock_python_library_dir";

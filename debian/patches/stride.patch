@@ -1,7 +1,7 @@
 Use stride from package if installed
 --- a/bin/vmd.sh
 +++ b/bin/vmd.sh
-@@ -402,6 +402,14 @@
+@@ -405,6 +405,14 @@
  # Stride -- used to generate cartoon representations etc.
  if [ -z "$STRIDE_BIN" ]
  then

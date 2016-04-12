@@ -1,7 +1,7 @@
 Use bash script even if csh is installed
 --- a/configure
 +++ b/configure
-@@ -3008,7 +3008,7 @@
+@@ -3294,7 +3294,7 @@
  	-\$(COPY) ../data/.vmdrc ../data/.vmdsensors ../data/vmd_completion.dat "$install_library_dir"
  	\$(CD) $vmd_bin_dir ; \\
  	if [ -f run_vmd_tmp ]; then \$(DELETE) run_vmd_tmp; fi ; \\
