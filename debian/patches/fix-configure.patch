@@ -1,7 +1,9 @@
 Remove invalid check for existence of plugins directory.
---- a/configure
-+++ b/configure
-@@ -134,29 +134,6 @@
+Index: b/configure
+===================================================================
+--- a/configure	2018-02-28 08:08:12.548730002 -0300
++++ b/configure	2018-02-28 08:08:12.544729932 -0300
+@@ -135,29 +135,6 @@
  # Configure script code begins here
  ############################################################################
  
@@ -30,4 +32,4 @@ Remove invalid check for existence of plugins directory.
 -
  #################### Parse command line options   ###########
  # list of allowed architectures
- @archlist=('IRIX6', 'IRIX6_64', 'FREEBSD', 'FREEBSDAMD64', 'HPUX11', 'AIX4', 'AIX5', 'AIX5_64', 'AIX6_64', 'ANDROIDARMV7A', 'BLUEGENEQ', 'BLUEWATERS', 'LINUX', 'LINUXALPHA', 'LINUXAMD64', 'LINUXIA64', 'LINUXCARMA', 'LINUXPPC', 'LINUXPPC64', 'MACOSX', 'MACOSXX86', 'MACOSXX86_64', 'TRU64', 'SOLARIS2', 'SOLARIS2_64', 'SOLARISX86', 'SOLARISX86_64', 'WIN32', 'WIN64');
+ @archlist=('AIX6_64', 'ANDROIDARMV7A', 'BLUEGENEQ', 'BLUEWATERS', 'CRAY_XC', 'CRAY_XK', 'FREEBSD', 'FREEBSDAMD64', 'LINUX', 'LINUXAMD64', 'LINUXCARMA', 'LINUXPPC64', 'MACOSX', 'MACOSXX86', 'MACOSXX86_64', 'OPENPOWER', 'SUMMIT', 'SOLARIS2', 'SOLARIS2_64', 'SOLARISX86', 'SOLARISX86_64', 'WIN32', 'WIN64');

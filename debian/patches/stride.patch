@@ -1,7 +1,9 @@
 Use stride from package if installed
---- a/bin/vmd.sh
-+++ b/bin/vmd.sh
-@@ -405,6 +405,14 @@
+Index: b/bin/vmd.sh
+===================================================================
+--- a/bin/vmd.sh	2018-02-28 08:08:13.012738208 -0300
++++ b/bin/vmd.sh	2018-02-28 08:08:13.012738208 -0300
+@@ -430,6 +430,14 @@
  # Stride -- used to generate cartoon representations etc.
  if [ -z "$STRIDE_BIN" ]
  then

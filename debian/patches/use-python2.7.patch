@@ -1,7 +1,9 @@
 Use python2.7
---- a/configure
-+++ b/configure
-@@ -1214,7 +1214,7 @@
+Index: b/configure
+===================================================================
+--- a/configure	2018-02-28 08:08:12.708732832 -0300
++++ b/configure	2018-02-28 08:08:12.708732832 -0300
+@@ -1365,7 +1365,7 @@
  $python_defines     = "-DVMDPYTHON";
  $python_include     = "-I$stock_python_include_dir -I$stock_numpy_include_dir -I$stock_numpy_library_dir";
  $python_library     = "-L$stock_python_library_dir";

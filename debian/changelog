@@ -1,3 +1,9 @@
+vmd (1.9.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Javier Bertoli <javier@netmanagers.com.ar>  Wed, 28 Feb 2018 08:02:22 -0300
+
 vmd (1.9.2+ds-1) unstable; urgency=low
 
   * VMD 1.9.2
